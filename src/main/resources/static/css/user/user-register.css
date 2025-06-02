@@ -1,0 +1,73 @@
+/* Reset body margin and set background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Container for the registration form */
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header */
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Input fields and select styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f1f3f5;
+    font-size: 1rem;
+}
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #198754;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #157347;
+}
+
+/* Back link */
+a.a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a.a:hover {
+    text-decoration: underline;
+}

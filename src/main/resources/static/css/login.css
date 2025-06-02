@@ -1,0 +1,83 @@
+/* Full-screen background image */
+body.background-image {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/images/login-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Semi-transparent wrapper */
+.body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login box */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.75); /* semi-transparent dark */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Input fields */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+}
+
+/* Button */
+.login-container button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #e0a800;
+}
+
+/* Register link */
+.login-container a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #17a2b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>update Bus</title>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bus/bus-form.css">
+</head>
+<body>
+<div th:replace="~{navbar :: navbar}"></div>
+
+<div class="form-container">
+<h2>Update Bus</h2>
+<form th:action="@{'/buses/update/' + ${bus.id}}" th:object="${bus}" method="post">
+ <label> Bus Number : </label> 
+ <input type="text" th:field="*{busNumber}" required/><br/>
+  <label> Operator :</label> 
+  <input type="text" th:field="*{operator}" required/><br/>
+  <label> TotalSeats :</label>
+   <input type="number" th:field="*{totalSeats}" required/><br/>
+  <label> ArrivalTime : </label>
+  <input type="time" th:field="*{arrivalTime}" required/><br/>
+  <label> DepartureTime :</label> 
+  <input type="time" th:field="*{departureTime}" required/><br/>
+
+  <button type="submit">Update</button>
+
+  <a class="a" th:href="@{/buses/list}">Go back to Bus List</a>
+</form>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav-link.active{
+          color: white ;
+        }
+        a:hover{
+          text-decoration: none;
+        }
+
+    </style>
+
+</head>
+<body>
+<div th:fragment="navbar">
+    <nav id="nav" class="p-3 navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Bus Reservation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/users/list}">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" th:href="@{/trips/list}">Trips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Management
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a th:href="@{/trips/add}" class="dropdown-item" href="#">Add Trip</a></li>
+                            <li><a th:href="@{/buses/add}" class="dropdown-item" href="#">Add Bus</a></li>
+                            <li><a th:href="@{/buses/list}" class="dropdown-item" href="#">Bus List</a></li>
+                            <li><a th:href="@{/bookings/list}" class="dropdown-item" href="#">Booking List</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+          <a th:href="@{/logout}">Logout</a>
+          </span>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+</body>
+</html>
