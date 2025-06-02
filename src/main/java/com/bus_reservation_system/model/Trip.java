@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
+@Builder
 @Document(collection = "trips")
 public class Trip {
     @Id

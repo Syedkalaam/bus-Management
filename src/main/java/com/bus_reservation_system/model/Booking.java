@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Builder
 @Document(collection = "bookings")
 public class Booking {
     @Id
